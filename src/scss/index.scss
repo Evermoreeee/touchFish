@@ -1,0 +1,43 @@
+@import './reset.scss';
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+
+
+*{
+    font-family: "Roboto";
+}
+html{
+    font-size: 3.33333vw;
+}
+
+.app_logo{
+    font-family: "Roboto";
+
+    font-size: 24px; //TODO:kobe
+    font-weight: 600;
+    color: #fff;
+}
+body {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 540px;
+    background: #fff;
+    font-size: 15px;
+    font-family: -apple-system,Helvetica,sans-serif;
+    line-height: 1.5;
+    color: #666;
+    -webkit-text-size-adjust: 100%!important;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex: 1;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
