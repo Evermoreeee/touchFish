@@ -6,6 +6,9 @@
 
 *{
     font-family: "Roboto";
+    :-webkit-scrollbar { width: 0 !important }
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
 }
 html{
     font-size: 3.33333vw;

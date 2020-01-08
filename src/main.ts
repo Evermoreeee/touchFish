@@ -5,6 +5,11 @@ import store from './store'
 import './registerServiceWorker'
 import * as Vuetensils from  "vuetensils"
 import '@/scss/index.scss'
+import Toasted from 'vue-toasted';
+import 'vant/lib/index.css';
+import vant from 'vant';
+
+Vue.use(vant)
 
 Vue.config.productionTip = false
 Vue.component("VDrawer", Vuetensils.VDrawer)

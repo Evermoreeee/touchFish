@@ -1,6 +1,7 @@
 const express = require('express')
 var bodyParser = require('body-parser')
 const app = express()
+const superagent= require('superagent');
 
 //允许跨域
 let allowCrossDomain = function (req, res, next) {
@@ -16,8 +17,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false})); 
 
 const userRouter = require('./user')
-
 app.use(userRouter)
+
 
 app.listen(8080, function() {
   console.log('node app start at port 8080')
