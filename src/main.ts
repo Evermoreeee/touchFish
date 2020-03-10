@@ -8,7 +8,7 @@ import '@/scss/index.scss'
 import Toasted from 'vue-toasted';
 import 'vant/lib/index.css';
 import vant from 'vant';
-
+import './icons'
 Vue.use(vant)
 
 Vue.config.productionTip = false

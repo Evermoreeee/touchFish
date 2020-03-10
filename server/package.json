@@ -1,0 +1,28 @@
+{
+    "name": "xyio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "serve": "vue-cli-service serve",
+      "build": "vue-cli-service build"
+    },
+    "dependencies": {
+      "cheerio": "^1.0.0-rc.3",
+      "core-js": "^3.4.4",
+      "express": "^4.17.1",
+      "log4js": "^6.1.0",
+      "mongoose": "^5.8.5",
+      "request": "^2.88.0",
+      "socket.io": "^2.3.0",
+      "superagent": "^5.2.1"
+    },
+    "devDependencies": {
+      "@vue/cli-service": "^4.1.0",
+      "body-parser": "^1.19.0"
+    },
+    "browserslist": [
+      "> 1%",
+      "last 2 versions"
+    ]
+  }
+  

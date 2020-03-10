@@ -1,7 +1,7 @@
 const express = require('express')
 const Router = express.Router()
 const model = require('./model')
-
+var request = require('request');
 
 const UserInfor = model.getModel('userInfor')
 
@@ -31,12 +31,12 @@ Router.post('/login',function(req,res){
 	// console.log(req)
 
 	const {userName,userPwd}  = req.body
-	UserInfor.findOne({userName:userName},function (err, data) {
+	UserInfor.find({userName:userName},function (err, data) {
 		console.log(data)
-		if(err || data.length == 0 ){
+		if(err || data.length == 0){
 			return res.json({code:33,data:data,messge:'查不到用户名'})
 		}else{
-			if(userPwd == data.userPwd){
+			if(userPwd == data[0].userPwd){
 				return res.json({code:0,data:data,messge:'登录成功'})
 			}else{
 				return res.json({code:33,data:data,messge:'密码错误'})
@@ -46,17 +46,35 @@ Router.post('/login',function(req,res){
 	// res.send('hello world');
 })
 
-Router.get('/newlist',function(req,res){
+Router.get('/newlist',function(req,res) {
 	// const {user,pwd} = req.body
 	// console.log(req)
-	BaiduNew.find({},function(err, data){
-		if(err || data.length == 0 ){
-			return res.json({code:33,data:data,messge:'获取列表为空'})
-		}else{
+	// BaiduNew.find({},function(err, data){
+	// 	if(err || data.length == 0 ){
+	// 		return res.json({code:33,data:data,messge:'获取列表为空'})
+	// 	}else{
+	// 		return res.json({code:0,data:data,messge:'获取列表成功'})
+	// 	}
+	// })
+	request('https://api.myjson.com/bins/1bnk2m', function (error, response,data) {
+		if (!error ) {
 			return res.json({code:0,data:data,messge:'获取列表成功'})
+		}else {	
+	 		return res.json({code:33,data:data,messge:'获取列表失败'})
 		}
-	})
-})
+	});
+	 
+}) 
+
+function _Proxy(url){
+	request(url, function (error, response,data) {
+		if (!error ) {
+			return data
+		}else {	
+			console.log(error);
+		}
+	});
+}
 
 
 module.exports = Router

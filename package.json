@@ -15,6 +15,7 @@
     "mint-ui": "^2.2.13",
     "mongoose": "^5.8.5",
     "register-service-worker": "^1.6.2",
+    "request": "^2.88.0",
     "socket.io": "^2.3.0",
     "superagent": "^5.2.1",
     "vant": "^2.2.0",
@@ -34,9 +35,11 @@
     "body-parser": "^1.19.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
+    "svg-sprite-loader": "^4.2.1",
+    "ts-import-plugin": "^1.5.5",
     "typescript": "~3.5.3",
-    "vue-template-compiler": "^2.6.10",
-    "ts-import-plugin": "^1.5.5"
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
     "> 1%",

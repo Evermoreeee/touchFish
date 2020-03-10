@@ -66,6 +66,8 @@ let getHotNews = (res) => {
     };
     hotNews.push(news)              // 存入最终结果数组
   });
+
+
   BaiduNew.insertMany(hotNews, function(err){
     if(err){
       console.log(err)
@@ -75,7 +77,6 @@ let getHotNews = (res) => {
   })
   return hotNews
 };
-
 
 
 

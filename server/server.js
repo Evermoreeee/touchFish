@@ -1,7 +1,7 @@
 const express = require('express')
 var bodyParser = require('body-parser')
 const app = express()
-const superagent= require('superagent');
+// const superagent= require('superagent');
 
 //允许跨域
 let allowCrossDomain = function (req, res, next) {
