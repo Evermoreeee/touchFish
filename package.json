@@ -11,7 +11,7 @@
     "cheerio": "^1.0.0-rc.3",
     "core-js": "^3.4.4",
     "express": "^4.17.1",
-    "log4js": "^6.1.0",
+    "log4js": "^6.4.0",
     "mint-ui": "^2.2.13",
     "mongoose": "^5.8.5",
     "register-service-worker": "^1.6.2",
